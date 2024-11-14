@@ -1,5 +1,5 @@
 import pandas as pd
-from connections import binance_api
+from . import binance_api
 from sklearn.preprocessing import MinMaxScaler
 import numpy as np
 
@@ -19,7 +19,7 @@ def fetch_data(symbol: str, interval: str, start_time: str, filename: str):
     df.drop(columns=["Ignore"], inplace=True)
 
     # Save the data to a CSV file
-    df.to_csv(filename, index=False)
+    df.to_csv("data/" + filename, index=False)
 
     print(f"Data saved to {filename}")
     return df.head()  # Return the first few rows for preview
