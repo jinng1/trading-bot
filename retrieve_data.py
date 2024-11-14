@@ -1,5 +1,7 @@
 import pandas as pd
 from connections import binance_api
+from sklearn.preprocessing import MinMaxScaler
+import numpy as np
 
 def download_historical_data(symbol: str, interval: str, start_time: str, filename: str):
     # Fetch historical data (candlestick data)
