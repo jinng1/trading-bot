@@ -3,7 +3,7 @@ from connections import binance_api
 from sklearn.preprocessing import MinMaxScaler
 import numpy as np
 
-def download_historical_data(symbol: str, interval: str, start_time: str, filename: str):
+def fetch_data(symbol: str, interval: str, start_time: str, filename: str):
     # Fetch historical data (candlestick data)
     client = binance_api.client
     klines = client.get_historical_klines(symbol, interval, start_str=start_time)

@@ -1,4 +1,4 @@
-from . import retrieve_data
+from . import data_pipeline
 import sys
 from PyQt5.QtWidgets import (
     QApplication, QWidget, QVBoxLayout, QLineEdit, QLabel, QPushButton, QMessageBox
@@ -66,7 +66,7 @@ class DataRetrievalApp(QWidget):
         try:
             # Trigger the download function (replace with actual call if available)
             filename = 'data_pipeline/data/' + filename
-            df = retrieve_data.download_historical_data(symbol, interval, start_time, filename)
+            df = data_pipeline.download_historical_data(symbol, interval, start_time, filename)
             QMessageBox.information(self, 'Success', f'Data retrieved for {symbol} with interval {interval}.')
         except Exception as e:
             QMessageBox.critical(self, 'Error', f'Failed to retrieve data: {str(e)}')

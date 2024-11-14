@@ -1,4 +1,4 @@
-# Crypto Trading Bot
+# Crypto Trading Bot (WIP)
 
 This is a Crypto Trading Bot with four key features:
 1. **Data Pipeline**
@@ -16,7 +16,7 @@ The Data Pipeline is responsible for gathering, processing, and managing the dat
 
 ### Functions:
 
-- **`fetch_data(symbol, interval, start_time, end_time)`**: Retrieves historical market data from an API (e.g., Binance). Allows you to specify the symbol (e.g., BTCUSDT), time interval (e.g., 1 minute, 1 hour), and date range.
+- **`fetch_data(symbol, interval, start_time, filename)`**: Retrieves historical market data from an API (e.g., Binance). Allows you to specify the symbol (e.g., BTCUSDT), time interval (e.g., 1 minute, 1 hour), and date to today.
   
 - **`preprocess_data(raw_data)`**: Cleans and formats the raw data (e.g., handling missing values, normalizing or scaling the data).
 
